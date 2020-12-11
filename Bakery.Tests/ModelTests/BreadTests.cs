@@ -1,23 +1,23 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-// using System.Collections.Generic;
+using System.Collections.Generic;
 using Inventory.Models;
-// using System;
+using System;
 
 namespace Inventory.TestTools
 {
   [TestClass]
-  public class BreadTests
+  public class BreadTests : IDisposable
   {
 
-    // public void Dispose()
-    // {
-    //   Bread.ClearAll();
-    // }
+    public void Dispose()
+    {
+      Bread.ClearAll();
+    }
 
     [TestMethod]
     public void GetBread_CreatesInstanceOfItem_Bread()
     {
-      Bread newBread = new Bread("test");
+      Bread newBread = new Bread("test", "this is a test message");
       Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
 
@@ -26,7 +26,7 @@ namespace Inventory.TestTools
     {
       // Arrange
       string flavor = "Sourdough";
-      Bread newBread = new Bread(flavor);
+      Bread newBread = new Bread(flavor, "this is a test message");
 
       // Act
       string result = newBread.Flavor;
@@ -39,8 +39,8 @@ namespace Inventory.TestTools
     public void GetWelcomeMessage_ReturnsWelcomeMessage_String()
     {
       // Arrange
-      string message = "Welcome to Schrader's Bakery! Bread is $5 per loaf, and Pastries are $2.50 each. What can we get you?";
-      Bread newBread = new Bread(message);
+      string message = "this is a test message";
+      Bread newBread = new Bread("Sourdough", message);
 
       // Act
       string result = newBread.Message;
@@ -50,3 +50,6 @@ namespace Inventory.TestTools
     }
   }
 }
+
+
+// "Welcome to Schrader's Bakery! Bread is $5 per loaf, and Pastries are $2.50 each. What can we get you?";
