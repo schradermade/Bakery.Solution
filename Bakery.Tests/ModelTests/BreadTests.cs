@@ -21,5 +21,18 @@ namespace Inventory.TestTools
       Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
 
+    [TestMethod]
+    public void GetBreadType_ReturnsType_String()
+    {
+      // Arrange
+      string flavor = "Sourdough";
+      Bread newBread = new Bread(flavor);
+
+      // Act
+      string result = newBread.Flavor;
+
+      // Assert
+      Assert.AreEqual(flavor, result);
+    }
   }
 }
