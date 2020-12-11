@@ -34,5 +34,19 @@ namespace Inventory.TestTools
       // Assert
       Assert.AreEqual(flavor, result);
     }
+
+    [TestMethod]
+    public void GetWelcomeMessage_ReturnsWelcomeMessage_String()
+    {
+      // Arrange
+      string message = "Welcome to Schrader's Bakery! Bread is $5 per loaf, and Pastries are $2.50 each. What can we get you?";
+      Bread newBread = new Bread(message);
+
+      // Act
+      string result = newBread.Message;
+
+      // Assert
+      Assert.AreEqual(message, result);
+    }
   }
 }
