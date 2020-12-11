@@ -17,7 +17,7 @@ namespace Inventory.TestTools
     [TestMethod]
     public void GetBread_CreatesInstanceOfItem_Bread()
     {
-      Bread newBread = new Bread();
+      Bread newBread = new Bread("test");
       Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
 
