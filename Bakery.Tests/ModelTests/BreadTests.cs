@@ -54,7 +54,7 @@ namespace Inventory.Tests
     {
       // Arrange
       string quantity = "2";
-      Bread newBread = new Bread("flavor here", "2");
+      Bread newBread = new Bread("flavor here", quantity);
 
       // Act
       string result = newBread.Quantity;
