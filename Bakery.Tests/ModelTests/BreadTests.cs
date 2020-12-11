@@ -62,6 +62,19 @@ namespace Inventory.Tests
       // Assert
       Assert.AreEqual(quantity, result);
     }
+
+    [TestMethod]
+    public void GetOrder_ReturnOrder_String()
+    {
+      // Arrange
+      List<Bread> newOrder = new List<Bread> { };
+
+      // Act
+      List<Bread> result = Bread.GetAll();
+
+      // Assert
+      CollectionAssert.AreEqual(newOrder, result);
+    }
   }
 }
 
