@@ -9,13 +9,32 @@ namespace Inventory.Models
 
     public string Message { get; set; }
 
+    public string Quantity { get; set; }
+
     private static List<Bread> _instances = new List<Bread> {};
 
-    public Bread(string flavor, string message)
+    private static List<Bread> breadOrder = new List<Bread> {};
+
+    public Bread(string flavor)
     {
       Flavor = flavor;
-      Message = message;
+      Message = "Our flavor bread of the day is Sourdough!";
+      breadOrder.Add(this);
     }
+
+    public Bread(string flavor, string quantity)
+      : this(flavor)
+    {
+      Message = "Our flavor bread of the day is Sourdough!";
+      Quantity = quantity;
+    }
+
+
+
+    // public string GetOrder()
+    // {
+      
+    // }
 
     public static List<Bread> GetAll()
     {
