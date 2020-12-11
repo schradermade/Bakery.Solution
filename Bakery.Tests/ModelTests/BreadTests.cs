@@ -17,7 +17,7 @@ namespace Inventory.TestTools
     [TestMethod]
     public void GetBread_CreatesInstanceOfItem_Bread()
     {
-      Bread newBread = new Bread("test", "this is a test message");
+      Bread newBread = new Bread("test");
       Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
 
@@ -26,7 +26,7 @@ namespace Inventory.TestTools
     {
       // Arrange
       string flavor = "Sourdough";
-      Bread newBread = new Bread(flavor, "this is a test message");
+      Bread newBread = new Bread(flavor);
 
       // Act
       string result = newBread.Flavor;
@@ -39,8 +39,8 @@ namespace Inventory.TestTools
     public void GetWelcomeMessage_ReturnsWelcomeMessage_String()
     {
       // Arrange
-      string message = "this is a test message";
-      Bread newBread = new Bread("Sourdough", message);
+      string message = "Our flavor bread of the day is Sourdough!";
+      Bread newBread = new Bread("Sourdough");
 
       // Act
       string result = newBread.Message;
@@ -48,8 +48,20 @@ namespace Inventory.TestTools
       // Assert
       Assert.AreEqual(message, result);
     }
+
+    [TestMethod]
+    public void GetOrderQuantity_ReturnsQuantityNumber_Integer()
+    {
+      // Arrange
+      int quantity = 2;
+      Bread newBread = new Bread("Sourdough", 2);
+
+      // Act
+      int result = newBread.Quantity;
+
+      // Assert
+      Assert.AreEqual(quantity, result);
+    }
   }
 }
 
-
-// "Welcome to Schrader's Bakery! Bread is $5 per loaf, and Pastries are $2.50 each. What can we get you?";
