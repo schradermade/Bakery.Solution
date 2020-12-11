@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Inventory.Models;
 using System;
 
-namespace Inventory.TestTools
+namespace Inventory.Tests
 {
   [TestClass]
   public class BreadTests : IDisposable
@@ -17,7 +17,7 @@ namespace Inventory.TestTools
     [TestMethod]
     public void GetBread_CreatesInstanceOfItem_Bread()
     {
-      Bread newBread = new Bread("test");
+      Bread newBread = new Bread("flavor", "2");
       Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
 
@@ -26,7 +26,7 @@ namespace Inventory.TestTools
     {
       // Arrange
       string flavor = "Sourdough";
-      Bread newBread = new Bread(flavor);
+      Bread newBread = new Bread(flavor, "2");
 
       // Act
       string result = newBread.Flavor;
@@ -40,7 +40,7 @@ namespace Inventory.TestTools
     {
       // Arrange
       string message = "Our flavor bread of the day is Sourdough!";
-      Bread newBread = new Bread("Sourdough");
+      Bread newBread = new Bread("Sourdough", "2");
 
       // Act
       string result = newBread.Message;
@@ -53,11 +53,11 @@ namespace Inventory.TestTools
     public void GetOrderQuantity_ReturnsQuantityNumber_Integer()
     {
       // Arrange
-      int quantity = 2;
-      Bread newBread = new Bread("Sourdough", 2);
+      string quantity = "2";
+      Bread newBread = new Bread("flavor here", "2");
 
       // Act
-      int result = newBread.Quantity;
+      string result = newBread.Quantity;
 
       // Assert
       Assert.AreEqual(quantity, result);
