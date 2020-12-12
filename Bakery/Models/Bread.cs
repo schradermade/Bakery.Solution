@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System;
+using Inventory;
 
 namespace Inventory.Models
 {
@@ -13,13 +14,13 @@ namespace Inventory.Models
 
     private static List<Bread> _instances = new List<Bread> {};
 
-    private static List<Bread> breadOrder = new List<Bread> {};
+    private static List<Bread> _breadOrder = new List<Bread> {};
 
     public Bread(string flavor)
     {
       Flavor = flavor;
       Message = "Our flavor bread of the day is Sourdough!";
-      breadOrder.Add(this);
+      _breadOrder.Add(this);
     }
 
     public Bread(string flavor, string quantity)
@@ -29,12 +30,10 @@ namespace Inventory.Models
       Quantity = quantity;
     }
 
-
-
-    // public string GetOrder()
-    // {
-      
-    // }
+    public string GetOrder()
+    {
+      return "tests";
+    }
 
     public static List<Bread> GetAll()
     {

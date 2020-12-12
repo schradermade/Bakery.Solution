@@ -18,11 +18,11 @@ namespace Inventory
         Console.WriteLine("Which flavor bread would you like?");
         Console.WriteLine("Our available flavors are: Sourdough");
         string flavor = Console.ReadLine();
-        Console.WriteLine("How many loafs would you like?");
+        Console.WriteLine("How many loafs of " + flavor + " would you like?");
         string quantityString = Console.ReadLine();
         // int quantityInt = int.Parse(quantityString);
+        Bread _breadOrder = new Bread(flavor, quantityString);
         
-  
       }
       
     }
