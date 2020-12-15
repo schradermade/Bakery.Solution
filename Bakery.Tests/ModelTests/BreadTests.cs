@@ -1,9 +1,9 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
-using Inventory.Models;
+using Bakery.Models;
 using System;
 
-namespace Inventory.Tests
+namespace Bakery.Tests
 {
   [TestClass]
   public class BreadTests : IDisposable

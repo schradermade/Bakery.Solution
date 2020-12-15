@@ -8,8 +8,7 @@ namespace Bakery
   {
     static void Main()
     {
-      
-      Console.WriteLine("Welcome to Schrader's Bakery! Bread is $5 per loaf, and Pastries are $2.50 each.");
+      Console.WriteLine("Welcome to Schrader's Bakery! Bread is $" + Bread.Price +  " per loaf, and Pastries are $2.50 each.");
       Console.WriteLine("press ENTER to order!");
       Console.ReadLine();
       Console.WriteLine("What can we get you?");
@@ -17,7 +16,6 @@ namespace Bakery
       string placeOrder = Console.ReadLine().ToLower();
       if (placeOrder == "bread")
       {
-        // Console.WriteLine(breadOrder.Message);
         Console.WriteLine("Which flavor bread would you like?");
         Console.WriteLine("press ENTER to see our selection!");
         Console.ReadLine();
@@ -26,11 +24,11 @@ namespace Bakery
         string flavor = Console.ReadLine();
         Console.WriteLine("How many loafs of " + flavor + " would you like?");
         string quantity = Console.ReadLine();
-        // int quantityInt = int.Parse(quantity);
+        int quantityString = Int32.Parse(quantity);
+        int quantityDeals = Int32.Parse(quantity) / 2;
         Bread _breadOrder = new Bread(flavor, quantity);
         Console.WriteLine(_breadOrder.GetOrder());
       }
-      
     }
   }
 }
