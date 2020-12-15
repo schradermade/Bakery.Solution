@@ -1,28 +1,34 @@
 using System;
 using System.Collections.Generic;
-using Inventory.Models;
 
-namespace Inventory
+
+namespace Bakery
 {
-  public class Program
+  public class Programs
   {
     static void Main()
     {
+      
       Console.WriteLine("Welcome to Schrader's Bakery! Bread is $5 per loaf, and Pastries are $2.50 each.");
+      Console.WriteLine("press ENTER to order!");
+      Console.ReadLine();
       Console.WriteLine("What can we get you?");
-      Console.WriteLine("Type 'Bread' or 'Pastry' ");
+      Console.WriteLine("Please Type 'Bread' or 'Pastry' ");
       string placeOrder = Console.ReadLine().ToLower();
       if (placeOrder == "bread")
       {
         // Console.WriteLine(breadOrder.Message);
         Console.WriteLine("Which flavor bread would you like?");
-        Console.WriteLine("Our available flavors are: Sourdough");
+        Console.WriteLine("press ENTER to see our selection!");
+        Console.ReadLine();
+        Console.WriteLine("Availabe Flavors: Sourdough");
+        Console.WriteLine("Please type in one of of the flavor selections listed.");
         string flavor = Console.ReadLine();
         Console.WriteLine("How many loafs of " + flavor + " would you like?");
-        string quantityString = Console.ReadLine();
-        // int quantityInt = int.Parse(quantityString);
-        Bread _breadOrder = new Bread(flavor, quantityString);
-        
+        string quantity = Console.ReadLine();
+        // int quantityInt = int.Parse(quantity);
+        Bread _breadOrder = new Bread(flavor, quantity);
+        Console.WriteLine(_breadOrder.GetOrder());
       }
       
     }

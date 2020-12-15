@@ -1,49 +1,39 @@
 using System.Collections.Generic;
 using System;
-using Inventory;
+using Bakery;
 
-namespace Inventory.Models
+namespace Bakery
 {
   public class Bread
   {
-    public string Flavor { get; }
-
-    public string Message { get; set; }
-
+    public string Flavor { get; set; }
     public string Quantity { get; set; }
-
+    public string Price 
+    { get; 
+    
+    
+    set; }
     private static List<Bread> _instances = new List<Bread> {};
-
     private static List<Bread> _breadOrder = new List<Bread> {};
-
-    public Bread(string flavor)
+    public Bread(string flavor, string quantity)
     {
       Flavor = flavor;
-      Message = "Our flavor bread of the day is Sourdough!";
+      Quantity = quantity;
+      Price = "5";
       _breadOrder.Add(this);
     }
-
-    public Bread(string flavor, string quantity)
-      : this(flavor)
+    public string GetOrder( )
     {
-      Message = "Our flavor bread of the day is Sourdough!";
-      Quantity = quantity;
+      return "Order Details: " + Quantity + " loafs of " + Flavor + " bread. " +  "$" + Price + 
+      " per loaf. Total: $" + (Int32.Parse(Price) * Int32.Parse(Quantity)) + " dollars.";
     }
-
-    public string GetOrder()
-    {
-      return "tests";
-    }
-
     public static List<Bread> GetAll()
     {
       return _instances;
     }
-
     public static void ClearAll()
     {
       _instances.Clear();
     }
-
   }
 }
