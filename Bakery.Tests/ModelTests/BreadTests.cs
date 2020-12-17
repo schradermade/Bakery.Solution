@@ -57,7 +57,7 @@ namespace Bakery.Tests
     int OrderCost = 15;
     Bread newBread = new Bread(flavor, price);
     // Act
-    int result = newBread.CalculateOrderCost();
+    double result = newBread.CalculateOrderCost(4);
     // Assert
     Assert.AreEqual(OrderCost, result);
     }
