@@ -7,21 +7,20 @@ namespace Bakery
   public class Bread
   {
     public string Flavor { get; set; }
-    public int Quantity { get; set; }
     public double Price { get; set; }
     private static List<Bread> _instances = new List<Bread> {};
     private static List<Bread> _breadOrder = new List<Bread> {};
-    public Bread(string flavor, int quantity)
+    public Bread(string flavor, double price)
     {
       Flavor = flavor;
-      Quantity = quantity;
+      Price = price;
       _breadOrder.Add(this);
     }
     public double  CalculateOrderCost(int quantity)
     {
-     int numberOfFullSets = Quantity / 3;
-     int billedQuantity = Quantity - numberOfFullSets;
-     return billedQuantity * Price;
+      int numberOfFullSets = quantity / 3;
+      int billedQuantity = quantity - numberOfFullSets;
+      return billedQuantity * Price;
     }
     public static List<Bread> GetAll()
     {
