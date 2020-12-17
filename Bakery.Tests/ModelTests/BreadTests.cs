@@ -78,6 +78,14 @@ namespace Bakery.Tests
     double result = newBread.Price;
     Assert.AreEqual(6, newBread.Price);
     }
+
+    [TestMethod]
+    public void SetFlavor_ReturnsFlavor_String()
+    {
+    Bread newBread = new Bread("plain", 6);
+    string result = newBread.Flavor;
+    Assert.AreEqual("glazed", newBread.Flavor);
+    }
   }
 }
 
