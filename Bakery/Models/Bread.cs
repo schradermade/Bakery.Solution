@@ -7,28 +7,19 @@ namespace Bakery
   public class Bread
   {
     public string Flavor { get; set; }
-    public string Quantity { get; set; }
-    public static int Price 
-    {  get
-      {
-        return 10;
-      } 
-    }  
+    public int Quantity { get; set; }
+    public double Price { get; set; }
     private static List<Bread> _instances = new List<Bread> {};
     private static List<Bread> _breadOrder = new List<Bread> {};
-    public Bread(string flavor, string quantity)
+    public Bread(string flavor, int quantity)
     {
       Flavor = flavor;
       Quantity = quantity;
       _breadOrder.Add(this);
     }
-    public string GetOrder()
+    public int CalculateOrderCost()
     {
-      return 
-      "Order Details: " + Quantity + " loafs of " + Flavor +
-      " bread @ " +  "$" + Price + 
-      " per loaf. Total: $" + (Price * Int32.Parse(Quantity)) 
-      + " dollars.";
+     return 15;
     }
     public static List<Bread> GetAll()
     {
