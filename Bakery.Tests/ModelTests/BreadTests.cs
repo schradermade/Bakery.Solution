@@ -39,7 +39,7 @@ namespace Bakery.Tests
     public void GetPrice_ReturnsPrice_Int()
     {
       int price = 5;
-      Bread newBread = new Bread("plain", 4);
+      Bread newBread = new Bread("plain", 5);
       double result = newBread.Price;
       Assert.AreEqual(price, result);
     }
