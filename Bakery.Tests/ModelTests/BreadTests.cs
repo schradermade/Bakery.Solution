@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
-using Bakery.Models;
+using Bakery;
 using System;
 
 namespace Bakery.Tests
@@ -36,20 +36,6 @@ namespace Bakery.Tests
     }
 
     [TestMethod]
-    public void GetWelcomeMessage_ReturnsWelcomeMessage_String()
-    {
-      // Arrange
-      string message = "Our flavor bread of the day is Sourdough!";
-      Bread newBread = new Bread("Sourdough", "2");
-
-      // Act
-      string result = newBread.Message;
-
-      // Assert
-      Assert.AreEqual(message, result);
-    }
-
-    [TestMethod]
     public void GetOrderQuantity_ReturnsQuantityNumber_Integer()
     {
       // Arrange
@@ -74,6 +60,17 @@ namespace Bakery.Tests
 
       // Assert
       CollectionAssert.AreEqual(newOrder, result);
+    }
+
+    [TestMethod]
+    public void CalcOrderCost_ReturnsTotalCost_Cost()
+    {
+    // Arrange
+    string flavor = "Plain";
+    int price = 5;
+    Bread newBread = new Bread(flavor, price);
+    // Act
+    int result = newBread.CalculateOrderCost();
     }
   }
 }
