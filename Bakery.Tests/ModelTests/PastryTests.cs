@@ -23,7 +23,7 @@ namespace Bakery.Tests
     [TestMethod]
     public void GetPrice_ReturnsPastryPricem_Price()
     {
-      Pastry newPastry = new Pastry("donut", 6);
+      Pastry newPastry = new Pastry("donut", 5);
       Assert.AreEqual(newPastry.Price, 5);
     }
 
