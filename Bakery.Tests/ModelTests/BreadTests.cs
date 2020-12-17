@@ -36,20 +36,6 @@ namespace Bakery.Tests
     }
 
     [TestMethod]
-    public void GetOrderQuantity_ReturnsQuantityNumber_Integer()
-    {
-      // Arrange
-      int quantity = 2;
-      Bread newBread = new Bread("flavor here", quantity);
-
-      // Act
-      int result = newBread.Quantity;
-
-      // Assert
-      Assert.AreEqual(quantity, result);
-    }
-
-    [TestMethod]
     public void GetOrder_ReturnOrder_String()
     {
       // Arrange
