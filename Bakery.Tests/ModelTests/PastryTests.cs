@@ -31,7 +31,7 @@ namespace Bakery.Tests
     public void GetFlavor_ReturnsPastryFlavor_String()
     {
       Pastry newPastry = new Pastry("donut", 5);
-      Assert.AreEqual(newPastry.Flavor, "glazed");
+      Assert.AreEqual(newPastry.Flavor, "donut");
     }
 
     [TestMethod]
