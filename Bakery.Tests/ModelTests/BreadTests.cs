@@ -70,6 +70,14 @@ namespace Bakery.Tests
     // Assert
     Assert.AreEqual(OrderCost, result);
     }
+
+    [TestMethod]
+    public void SetPrice_ReturnsPrice_Int()
+    {
+    Bread newBread = new Bread("glazed", 5);
+    double result = newBread.Price;
+    Assert.AreEqual(6, newBread.Price);
+    }
   }
 }
 
