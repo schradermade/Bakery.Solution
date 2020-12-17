@@ -21,10 +21,17 @@ namespace Bakery.Tests
     }
     
     [TestMethod]
-    public void GetPrice_ReturnsPastryPricem_Price()
+    public void GetPrice_ReturnsPastryPrice_Int()
     {
       Pastry newPastry = new Pastry("donut", 5);
       Assert.AreEqual(newPastry.Price, 5);
+    }
+
+    [TestMethod]
+    public void GetFlavor_ReturnsPastryFlavor_String()
+    {
+      Pastry newPastry = new Pastry("donut", 5);
+      Assert.AreEqual(newPastry.Flavor, "glazed");
     }
 
     [TestMethod]
