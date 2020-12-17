@@ -73,7 +73,7 @@ namespace Bakery.Tests
     {
     Pastry newPastry = new Pastry("donut", 6);
     string result = newPastry.Flavor;
-    Assert.AreEqual("plain", newPastry.Flavor);
+    Assert.AreEqual("donut", newPastry.Flavor);
     }
   }
 }
