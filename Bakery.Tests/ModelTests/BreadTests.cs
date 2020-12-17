@@ -84,7 +84,7 @@ namespace Bakery.Tests
     {
     Bread newBread = new Bread("plain", 6);
     string result = newBread.Flavor;
-    Assert.AreEqual("glazed", newBread.Flavor);
+    Assert.AreEqual("plain", newBread.Flavor);
     }
   }
 }
