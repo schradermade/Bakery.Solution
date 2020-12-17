@@ -17,7 +17,7 @@ namespace Bakery.Tests
     [TestMethod]
     public void GetBread_CreatesInstanceOfItem_Bread()
     {
-      Bread newBread = new Bread("flavor", "2");
+      Bread newBread = new Bread("flavor", 2);
       Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
 
@@ -26,7 +26,7 @@ namespace Bakery.Tests
     {
       // Arrange
       string flavor = "Sourdough";
-      Bread newBread = new Bread(flavor, "2");
+      Bread newBread = new Bread(flavor, 2);
 
       // Act
       string result = newBread.Flavor;
@@ -39,11 +39,11 @@ namespace Bakery.Tests
     public void GetOrderQuantity_ReturnsQuantityNumber_Integer()
     {
       // Arrange
-      string quantity = "2";
+      int quantity = 2;
       Bread newBread = new Bread("flavor here", quantity);
 
       // Act
-      string result = newBread.Quantity;
+      int result = newBread.Quantity;
 
       // Assert
       Assert.AreEqual(quantity, result);
@@ -68,9 +68,12 @@ namespace Bakery.Tests
     // Arrange
     string flavor = "Plain";
     int price = 5;
+    int OrderCost = 15;
     Bread newBread = new Bread(flavor, price);
     // Act
     int result = newBread.CalculateOrderCost();
+    // Assert
+    Assert.AreEqual(OrderCost, result);
     }
   }
 }
