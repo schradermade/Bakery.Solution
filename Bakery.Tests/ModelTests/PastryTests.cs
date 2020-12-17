@@ -67,5 +67,13 @@ namespace Bakery.Tests
     double result = newPastry.Price;
     Assert.AreEqual(5, newPastry.Price);
     }
+
+    [TestMethod]
+    public void SetFlavor_ReturnsFlavor_String()
+    {
+    Pastry newPastry = new Pastry("donut", 6);
+    string result = newPastry.Flavor;
+    Assert.AreEqual("plain", newPastry.Flavor);
+    }
   }
 }
