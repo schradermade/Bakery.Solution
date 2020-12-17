@@ -74,7 +74,7 @@ namespace Bakery.Tests
     [TestMethod]
     public void SetPrice_ReturnsPrice_Int()
     {
-    Bread newBread = new Bread("glazed", 5);
+    Bread newBread = new Bread("glazed", 6);
     double result = newBread.Price;
     Assert.AreEqual(6, newBread.Price);
     }
