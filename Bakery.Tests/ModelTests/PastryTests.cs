@@ -26,7 +26,7 @@ namespace Bakery.Tests
       // Arrange
       string flavor = "Glazed";
       int price = 3;
-      int OrderCost = 15;
+      int OrderCost = 10;
       Pastry newPastry = new Pastry(flavor, price);
       // Act
       double result = newPastry.CalculatePastryOrder(4);
