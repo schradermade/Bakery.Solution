@@ -22,7 +22,7 @@ namespace Bakery.Tests
     }
 
     [TestMethod]
-    public void GetBreadType_ReturnsType_String()
+    public void GetBreadFlavor_ReturnsFlavor_String()
     {
       // Arrange
       string flavor = "Sourdough";
@@ -33,6 +33,15 @@ namespace Bakery.Tests
 
       // Assert
       Assert.AreEqual(flavor, result);
+    }
+
+    [TestMethod]
+    public void GetPrice_ReturnsPrice_Int()
+    {
+      int price = 5;
+      Bread newBread = new Bread("plain", 4);
+      double result = newBread.Price;
+      Assert.AreEqual(price, result);
     }
 
     [TestMethod]
