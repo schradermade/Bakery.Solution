@@ -67,7 +67,7 @@ namespace Bakery.Tests
     double result = newPastry.Price;
     Assert.AreEqual(5, newPastry.Price);
     }
-
+    
     [TestMethod]
     public void SetFlavor_ReturnsFlavor_String()
     {

@@ -16,7 +16,7 @@ namespace Bakery
       Price = price;
       _breadOrder.Add(this);
     }
-    public double  CalculateOrderCost(int quantity)
+    public double CalculateOrderCost(int quantity)
     {
       int numberOfFullSets = quantity / 3;
       int billedQuantity = quantity - numberOfFullSets;
