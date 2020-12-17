@@ -34,5 +34,16 @@ namespace Bakery.Tests
       Assert.AreEqual(OrderCost, result);
     }
 
+    [TestMethod]
+    public void SetPastryFlavor_SetsFlavor_String()
+    {
+    // Arrange
+    string flavor = "glazed";
+    Pastry newPastry = new Pastry(flavor, 2);
+    // Act
+    string result = newPastry.Flavor;
+    //Assert
+    Assert.AreEqual(flavor, result);
+    }
   }
 }
