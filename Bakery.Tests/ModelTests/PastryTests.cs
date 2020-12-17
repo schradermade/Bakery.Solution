@@ -63,7 +63,7 @@ namespace Bakery.Tests
     [TestMethod]
     public void SetPrice_ReturnsPrice_Int()
     {
-    Pastry newPastry = new Pastry("glazed", 6);
+    Pastry newPastry = new Pastry("glazed", 5);
     double result = newPastry.Price;
     Assert.AreEqual(5, newPastry.Price);
     }
