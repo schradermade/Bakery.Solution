@@ -17,29 +17,41 @@ namespace Bakery
       Pastry donut = new Pastry("Glazed Donut", 2);
       double totalOrderCostBread = 0;
       double totalOrderCostPastry = 0;
-      Console.WriteLine("Welcome to Schrader's Bakery! Plain bread is $" + plainBread.Price +  " per loaf, and Pastries are $" + donut.Price + " each.");
+      Console.WriteLine("");
+      Console.WriteLine("**********Welcome to Schrader's Bakery!**********");
+      Console.WriteLine("");
+      Console.WriteLine("> Plain bread: $" + plainBread.Price +  " per loaf | Pastries: $" + donut.Price + " each <");
+      Console.WriteLine("");
       Console.WriteLine("Today's Deals:");
+      Console.WriteLine("");
       Console.WriteLine("Bread: Buy 2, get 1 free. A single loaf costs $" + plainBread.Price);
+      Console.WriteLine("");
       Console.WriteLine("Pastries: Buy 1 for $" + donut.Price + ", or 3 for $5.");
+      Console.WriteLine("");
       Console.WriteLine("press ENTER to order!");
       Console.ReadLine();
       Console.WriteLine("Would you like to order bread today? Type 'yes' to order");
       string breadOrder = Console.ReadLine();
+      Console.WriteLine("");
       if (breadOrder == "yes")
       {
         Console.WriteLine("Which flavor bread would you like?");
         Console.WriteLine("press ENTER to see our selection!");
         Console.ReadLine();
-        Console.WriteLine("Availabe Flavors: Plain");
+        Console.WriteLine("Availabe Bread Flavors: Plain");
         Console.WriteLine("Please type in one of of the flavor selections listed.");
         flavorBread = Console.ReadLine();
+        Console.WriteLine("");
         Console.WriteLine("How many loafs of " + flavorBread + " bread would you like?");
+        Console.WriteLine("");
         quantityBreadString = Console.ReadLine();
+        Console.WriteLine("");
         quantityBread = Int32.Parse(quantityBreadString);
         totalOrderCostBread += plainBread.CalculateOrderCost(quantityBread);
       }
       Console.WriteLine("Would you like to order pastries today? Type 'yes' to order");
       string pastryOrder = Console.ReadLine();
+      Console.WriteLine("");
       if (pastryOrder == "yes")
       {
         Console.WriteLine("Which flavor pastry would you like?");
@@ -48,8 +60,11 @@ namespace Bakery
         Console.WriteLine("Available Flavors: Glazed Donut");
         Console.WriteLine("Please type in one of the flavor selections listed.");
         flavorPastry = Console.ReadLine();
+        Console.WriteLine("");
         Console.WriteLine("How many " + flavorPastry + "'s would you like?");
+        Console.WriteLine("");
         quantityPastryString = Console.ReadLine();
+        Console.WriteLine("");
         quantityPastry = Int32.Parse(quantityPastryString);
         totalOrderCostPastry += donut.CalculatePastryOrder(quantityPastry);
       }
