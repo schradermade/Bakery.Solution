@@ -129,7 +129,7 @@ namespace Bakery.Tests
       string flavor = "Plain";
       int orderQuantity = 3;
       int price = 5;
-      int orderTotal = 15;
+      int orderTotal = 10;
       Bread newBread = new Bread(flavor, price);
 
       // Act
