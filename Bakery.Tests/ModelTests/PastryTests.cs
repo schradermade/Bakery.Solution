@@ -121,5 +121,20 @@ namespace Bakery.Tests
       // Assert
       Assert.AreEqual(orderTotal, result);
     }
+
+    [TestMethod]
+    public void CalcOrderCostFiveItems_ReturnsTotalDiscountYes_Cost()
+    {
+      // Arrange
+      string flavor = "Glazed";
+      int orderQuantity = 5;
+      int price = 2;
+      int orderTotal = 10;
+      Pastry newPastry = new Pastry(flavor, price);
+      // Act
+      double result = newPastry.CalculatePastryOrder(orderQuantity);
+      // Assert
+      Assert.AreEqual(orderTotal, result);
+    }
   }
 }
