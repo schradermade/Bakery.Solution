@@ -8,8 +8,8 @@ namespace Bakery
   {
     public string Flavor { get; set; }
     public double Price { get; set; }
-    private static List<Pastry> _instances = new List<Pastry> {};
-    private static List<Pastry> _pastryOrder = new List<Pastry> {};
+    private static List<Pastry> _instances = new List<Pastry> { };
+    private static List<Pastry> _pastryOrder = new List<Pastry> { };
     public Pastry(string flavor, double price)
     {
       Flavor = flavor;
