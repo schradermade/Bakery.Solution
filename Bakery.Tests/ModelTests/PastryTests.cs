@@ -47,20 +47,6 @@ namespace Bakery.Tests
     }
 
     [TestMethod]
-    public void CalcOrderCost_ReturnsTotalCost_Cost()
-    {
-      // Arrange
-      string flavor = "Glazed";
-      int price = 3;
-      int OrderCost = 10;
-      Pastry newPastry = new Pastry(flavor, price);
-      // Act
-      double result = newPastry.CalculatePastryOrder(4);
-      // Assert
-      Assert.AreEqual(OrderCost, result);
-    }
-
-    [TestMethod]
     public void SetPrice_ReturnsPrice_Int()
     {
     Pastry newPastry = new Pastry("glazed", 5);
@@ -75,5 +61,22 @@ namespace Bakery.Tests
     string result = newPastry.Flavor;
     Assert.AreEqual("donut", newPastry.Flavor);
     }
+
+    [TestMethod]
+    public void CalcOrderCostNoDeal_ReturnsTotalCostOne_Cost()
+    {
+      // Arrange
+      string flavor = "Glazed";
+      int orderQuantity = 2;
+      int price = 2;
+      int orderTotal = 2;
+      Pastry newPastry = new Pastry(flavor, price);
+      // Act
+      double result = newPastry.CalculatePastryOrder(orderQuantity);
+      // Assert
+      Assert.AreEqual(orderTotal, result);
+    }
+
+
   }
 }
