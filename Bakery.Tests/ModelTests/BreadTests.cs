@@ -89,7 +89,7 @@ namespace Bakery.Tests
     }
 
     [TestMethod]
-    public void CalcOrderCost_ReturnsTotalNoDiscount_Cost()
+    public void CalcOrderCostOneItem_ReturnsTotalNoDiscount_Cost()
     {
       // Arrange
       string flavor = "Plain";
@@ -106,7 +106,7 @@ namespace Bakery.Tests
     }
 
     [TestMethod]
-    public void CalcOrderCostTwoItems_ReturnsTotalWithDiscount_Total()
+    public void CalcOrderCostTwoItems_ReturnsTotalNoDiscount_Total()
     {
       // Arrange
       string flavor = "Plain";
