@@ -138,6 +138,23 @@ namespace Bakery.Tests
       // Assert
       Assert.AreEqual(orderTotal, result);
     }
+
+    [TestMethod]
+    public void CalcOrderCostFourItems_ReturnsTotalWithDiscount_Total()
+    {
+      // Arrange
+      string flavor = "Plain";
+      int orderQuantity = 4;
+      int price = 5;
+      int orderTotal = 20;
+      Bread newBread = new Bread(flavor, price);
+
+      // Act
+      double result = newBread.CalculateOrderCost(orderQuantity);
+
+      // Assert
+      Assert.AreEqual(orderTotal, result);
+    }
   }
 }
 
