@@ -12,28 +12,30 @@ namespace Bakery.Tests
     {
       Pastry.ClearAll();
     }
-
     [TestMethod]
     public void GetPastry_CreatesInstanceOfItem_Pastry()
     {
+      // Arrange
       Pastry newPastry = new Pastry("donut", 3);
+      // Assert
       Assert.AreEqual(typeof(Pastry), newPastry.GetType());
     }
-    
     [TestMethod]
     public void GetPrice_ReturnsPastryPrice_Int()
     {
+      // Arrange
       Pastry newPastry = new Pastry("donut", 5);
+      // Assert
       Assert.AreEqual(newPastry.Price, 5);
     }
-
     [TestMethod]
     public void GetFlavor_ReturnsPastryFlavor_String()
     {
+      // Arrange
       Pastry newPastry = new Pastry("donut", 5);
+      // Assert
       Assert.AreEqual(newPastry.Flavor, "donut");
     }
-
     [TestMethod]
     public void GetPastryFlavor_GetsFlavor_String()
     {
@@ -45,23 +47,26 @@ namespace Bakery.Tests
     //Assert
     Assert.AreEqual(flavor, result);
     }
-
     [TestMethod]
     public void SetPrice_ReturnsPrice_Int()
     {
+    // Arrange
     Pastry newPastry = new Pastry("glazed", 5);
+    // Act
     double result = newPastry.Price;
+    // Assert
     Assert.AreEqual(5, newPastry.Price);
     }
-    
     [TestMethod]
     public void SetFlavor_ReturnsFlavor_String()
     {
+    // Arrange
     Pastry newPastry = new Pastry("donut", 6);
+    // Act
     string result = newPastry.Flavor;
+    // Assert
     Assert.AreEqual("donut", newPastry.Flavor);
     }
-
     [TestMethod]
     public void CalcOrderCostOneItem_ReturnsTotalDiscountNo_Total()
     {
@@ -76,7 +81,6 @@ namespace Bakery.Tests
       // Assert
       Assert.AreEqual(orderTotal, result);
     }
-
     [TestMethod]
     public void CalcOrderCostTwoItems_ReturnsTotalDiscountNo_Cost()
     {
@@ -91,7 +95,6 @@ namespace Bakery.Tests
       // Assert
       Assert.AreEqual(orderTotal, result);
     }
-
     [TestMethod]
     public void CalcOrderCostThreeItems_ReturnsTotalDiscountYes_Cost()
     {
@@ -106,7 +109,6 @@ namespace Bakery.Tests
       // Assert
       Assert.AreEqual(orderTotal, result);
     }
-
     [TestMethod]
     public void CalcOrderCostFourItems_ReturnsTotalDiscountYes_Cost()
     {
@@ -121,7 +123,6 @@ namespace Bakery.Tests
       // Assert
       Assert.AreEqual(orderTotal, result);
     }
-
     [TestMethod]
     public void CalcOrderCostFiveItems_ReturnsTotalDiscountYes_Cost()
     {
