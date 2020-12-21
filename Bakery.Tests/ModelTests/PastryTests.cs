@@ -67,7 +67,7 @@ namespace Bakery.Tests
     {
       // Arrange
       string flavor = "Glazed";
-      int orderQuantity = 2;
+      int orderQuantity = 1;
       int price = 2;
       int orderTotal = 2;
       Pastry newPastry = new Pastry(flavor, price);
