@@ -146,7 +146,7 @@ namespace Bakery.Tests
       string flavor = "Plain";
       int orderQuantity = 4;
       int price = 5;
-      int orderTotal = 20;
+      int orderTotal = 15;
       Bread newBread = new Bread(flavor, price);
 
       // Act
