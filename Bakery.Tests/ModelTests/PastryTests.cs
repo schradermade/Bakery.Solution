@@ -129,7 +129,7 @@ namespace Bakery.Tests
       string flavor = "Glazed";
       int orderQuantity = 5;
       int price = 2;
-      int orderTotal = 10;
+      int orderTotal = 9;
       Pastry newPastry = new Pastry(flavor, price);
       // Act
       double result = newPastry.CalculatePastryOrder(orderQuantity);
