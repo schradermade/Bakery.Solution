@@ -58,17 +58,18 @@ namespace Bakery.Tests
     }
 
     [TestMethod]
-    public void CalcOrderCost_ReturnsTotalCost_Cost()
+    public void CalcOrderCostOneItem_ReturnsTotalCost_Cost()
     {
     // Arrange
-    string flavor = "Plain";
-    int price = 5;
-    int OrderCost = 15;
-    Bread newBread = new Bread(flavor, price);
+      string flavor = "Plain";
+      int orderNumber = 1;
+      int price = 5;
+      int orderTotal = 5;
+      Bread newBread = new Bread(flavor, price);
     // Act
-    double result = newBread.CalculateOrderCost(4);
+      double result = newBread.CalculateOrderCost(orderNumber);
     // Assert
-    Assert.AreEqual(OrderCost, result);
+      Assert.AreEqual(orderTotal, result);
     }
 
     [TestMethod]
@@ -85,6 +86,24 @@ namespace Bakery.Tests
     Bread newBread = new Bread("plain", 6);
     string result = newBread.Flavor;
     Assert.AreEqual("plain", newBread.Flavor);
+    }
+
+    [TestMethod]
+    public void CalcOrderCost_ReturnsTotalNoDiscount_Cost()
+    {
+      // Arrange
+      string flavor = "Plain";
+      int orderNumber = 2;
+      int price = 5;
+      int orderTotal = 5;
+      Bread newBread = new Bread(flavor, price);
+
+      // Act
+      double result = newBread.CalculateOrderCost(orderNumber);
+
+      // Assert
+      Assert.AreEqual(orderTotal, result);
+      
     }
   }
 }
