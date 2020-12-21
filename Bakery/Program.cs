@@ -18,7 +18,9 @@ namespace Bakery
       double totalOrderCostBread = 0;
       double totalOrderCostPastry = 0;
       Console.WriteLine("");
+      Console.WriteLine("*************************************************");
       Console.WriteLine("**********Welcome to Schrader's Bakery!**********");
+      Console.WriteLine("*************************************************");
       Console.WriteLine("");
       Console.WriteLine("> Plain bread: $" + plainBread.Price +  " per loaf | Pastries: $" + donut.Price + " each <");
       Console.WriteLine("");
