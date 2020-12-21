@@ -93,13 +93,13 @@ namespace Bakery.Tests
     }
 
     [TestMethod]
-    public void CalcOrderCostThreItems_ReturnsTotalDiscountYes_Cost()
+    public void CalcOrderCostThreeItems_ReturnsTotalDiscountYes_Cost()
     {
       // Arrange
       string flavor = "Glazed";
       int orderQuantity = 3;
       int price = 2;
-      int orderTotal = 6;
+      int orderTotal = 5;
       Pastry newPastry = new Pastry(flavor, price);
       // Act
       double result = newPastry.CalculatePastryOrder(orderQuantity);
