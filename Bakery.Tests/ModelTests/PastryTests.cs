@@ -63,11 +63,26 @@ namespace Bakery.Tests
     }
 
     [TestMethod]
-    public void CalcOrderCostNoDeal_ReturnsTotalCostOne_Cost()
+    public void CalcOrderCostOneItem_ReturnsTotalDiscountNo_Total()
     {
       // Arrange
       string flavor = "Glazed";
       int orderQuantity = 1;
+      int price = 2;
+      int orderTotal = 2;
+      Pastry newPastry = new Pastry(flavor, price);
+      // Act
+      double result = newPastry.CalculatePastryOrder(orderQuantity);
+      // Assert
+      Assert.AreEqual(orderTotal, result);
+    }
+
+    [TestMethod]
+    public void CalcOrderCostTwoItems_ReturnsTotalDiscountNo_Cost()
+    {
+      // Arrange
+      string flavor = "Glazed";
+      int orderQuantity = 2;
       int price = 2;
       int orderTotal = 2;
       Pastry newPastry = new Pastry(flavor, price);
